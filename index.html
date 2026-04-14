@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شوز ماركت | أحذية الماركات الأصلية</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="top-bar">شحن مجاني للطلبات فوق 150 دينار | التوصيل خلال 3-5 أيام</div>
+        <nav>
+            <div class="logo">شوز ماركت 👟</div>
+            <div class="menu">
+                <a href="#">الرئيسية</a>
+                <a href="#products">المنتجات</a>
+                <a href="#cart">السلة (<span id="cart-count">0</span>)</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>أفضل الأحذية الماركات بأسعار تنافسية</h1>
+        <p>Nike • Adidas • Puma • New Balance • Reebok</p>
+        <button onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">تسوق الآن</button>
+    </section>
+
+    <section id="products" class="products-section">
+        <h2>منتجاتنا</h2>
+        <div class="filters">
+            <button onclick="filterCategory('all')">الكل</button>
+            <button onclick="filterCategory('nike')">نايك</button>
+            <button onclick="filterCategory('adidas')">أديداس</button>
+            <button onclick="filterCategory('puma')">بوما</button>
+        </div>
+        <div id="product-list" class="product-grid"></div>
+    </section>
+
+    <section id="cart-section" class="cart-section" style="display: none;">
+        <h2>سلة التسوق</h2>
+        <div id="cart-items"></div>
+        <div class="total">المجموع: <span id="cart-total">0</span> دينار</div>
+        <button onclick="checkout()">إتمام الشراء</button>
+    </section>
+
+    <footer>
+        <p>© 2026 شوز ماركت - جميع الحقوق محفوظة</p>
+        <p>للتواصل: 079XXXXXXX | info@shoezmarket.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
