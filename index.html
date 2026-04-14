@@ -1,0 +1,30 @@
+<!-- Cart Section -->
+<section id="cart-section" class="cart-section" style="display: none;">
+    <h2>سلة التسوق 🛒</h2>
+    <div id="cart-items"></div>
+    <div class="total">المجموع: <span id="cart-total">0</span> دينار</div>
+
+    <!-- خيارات الدفع الجديدة -->
+    <div class="payment-options">
+        <h3>اختر طريقة الدفع:</h3>
+        <label>
+            <input type="radio" name="payment" value="cash" checked> 
+            نقداً عند الاستلام (Cash on Delivery)
+        </label><br><br>
+        <label>
+            <input type="radio" name="payment" value="visa"> 
+            فيزا / بطاقة ائتمان (Visa / Mastercard)
+        </label>
+    </div>
+
+    <!-- نموذج معلومات العميل -->
+    <div class="customer-info">
+        <h3>معلوماتك:</h3>
+        <input type="text" id="customer-name" placeholder="الاسم الكامل" required><br><br>
+        <input type="tel" id="customer-phone" placeholder="رقم الجوال (مثال: 0791234567)" required><br><br>
+        <input type="text" id="customer-address" placeholder="العنوان الكامل (عمان - الأردن)" required>
+    </div>
+
+    <button onclick="checkout()" class="checkout-btn">إتمام الطلب وإرسال عبر واتساب</button>
+    <button onclick="clearCart()" class="clear-btn">تفريغ السلة</button>
+</section>
